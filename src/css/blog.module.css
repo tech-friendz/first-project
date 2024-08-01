@@ -1,0 +1,147 @@
+.blog {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.blog .title {
+    width: 70%;
+    text-align: center;
+    color: #565656;
+    font-weight: 500;
+}
+
+.blog .blogContent {
+    margin-top: 3rem;
+    width: 100%;
+    border: 2px solid #8F897F;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    background: #E3DCCC6B;
+}
+
+.blog .blogContent p {
+    color: #565656;
+    width: 90%;
+    line-height: 25px;
+}
+
+.subTitle {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    color: #565656;
+}
+
+.subtitleContent {
+    width: 100%;
+    text-align: center;
+    color: #565656;
+    line-height: 21px;
+}
+
+.blogContentPhotos {
+    margin-top: 3rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.blogContentFooter {
+    margin-top: 3rem;
+    text-align: center;
+    line-height: 21px;
+    color: #565656;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 1200px) {
+    .blog .title {
+        width: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .blog {
+        width: 80%;
+    }
+
+    .blog .title {
+        width: 80%;
+    }
+
+    .blog .blogContent {
+        padding: 2rem;
+        width: 90%;
+    }
+
+    .subtitleContent {
+        width: 90%;
+    }
+
+    .blogContentFooter {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog .title {
+        width: 80%;
+    }
+
+    .blog {
+        width: 95%;
+    }
+
+    .blog .title {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+
+    .blog .blogContent {
+        padding: 1.5rem;
+    }
+
+    .subTitle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .blog .title {
+        width: 70%;
+    }
+
+    .blog {
+        width: 100%;
+    }
+
+    .blog .title {
+        width: 95%;
+        font-size: 1.3rem;
+    }
+
+    .blog .blogContent {
+        padding: 1rem;
+    }
+
+    .subTitle {
+        font-size: 1.1rem;
+    }
+
+    .subtitleContent {
+        line-height: 1.5rem;
+    }
+
+    .blogContentPhotos {
+        grid-template-columns: 1fr;
+    }
+}

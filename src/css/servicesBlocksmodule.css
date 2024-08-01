@@ -1,0 +1,93 @@
+.servicesContent p {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 2rem;
+    color: #555555;
+    text-align: center;
+}
+
+.sectionDivider {
+    width: 5rem;
+    height: 2px;
+    background-color: #555555;
+    border: none;
+    margin: 1rem auto;
+}
+
+.servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.serviceCategories {
+    position: relative;
+    width: 25rem;
+    height: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #E1DACF;
+    color: #555555;
+}
+
+.serviceCategories img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 22rem;
+    object-fit: contain;
+}
+
+.serviceOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #555555;
+}
+
+.serviceTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.titleDivider {
+    border: none;
+    margin: 0.5rem auto;
+    width: 50%;
+    border: 0;
+    background: #777168;
+}
+
+
+
+.indicator {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border: 6px solid #f8f5f2;
+    background-color: #555555;
+    border-radius: 50%;
+    right: -1%;
+    bottom: -1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/arrow.png');
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .servicesContainer {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+}

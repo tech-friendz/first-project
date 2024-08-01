@@ -1,0 +1,95 @@
+.slider {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 1rem;
+
+}
+
+.nextArrow,
+.prevArrow {
+    position: absolute;
+    top: -2.5rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.nextArrow {
+    right: 1rem;
+    border: 1px solid #574B44;
+    padding: 0.5rem;
+    width: 4rem;
+    border-radius: 30px;
+    text-align: center;
+    color: #574B44;
+}
+
+.prevArrow {
+    right: 6rem;
+    border: 1px solid #BEB7AA;
+    padding: 0.5rem;
+    width: 3rem;
+    border-radius: 30px;
+    text-align: center;
+    color: #BEB7AA;
+}
+
+.blogSlide {
+    padding: 1rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.blogSlide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.blogSlide h3 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: #BAA588;
+    font-weight: 400;
+}
+
+.blogSlide p {
+    color: #565656;
+    font-size: 0.9rem;
+}
+
+.readMore {
+    display: block;
+    margin-top: 10px;
+    color: #BAA588;
+    text-decoration: underline;
+}
+
+.slick-dots {
+    bottom: -25px;
+}
+
+.slick-dots li button:before {
+    font-size: 6rem;
+    color: #BAA588;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #574B44;
+}
+
+@media (max-width: 768px) {
+
+    .nextArrow,
+    .prevArrow {
+        top: -7%
+    }
+}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 1200px) {}

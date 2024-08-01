@@ -1,0 +1,229 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat Alternates", sans-serif;
+    padding: 0 1rem;
+}
+
+.servicesContent,
+.ourTeam .title,
+.whatWeDo .title,
+.ourMission .ourMissionTitle,
+.ourValues .ourValuesTitle {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.servicesContent p,
+.ourTeam .title p,
+.whatWeDo .title p,
+.ourMissionTitle p,
+.ourValuesTitle p {
+    font-size: 2rem;
+    color: #565656;
+}
+
+.servicesContent p {
+    font-size: 3rem;
+}
+
+.aboutSectionDivider {
+    width: 8%;
+    margin: 0.3rem auto;
+    border: 0;
+    height: 4rem;
+    background: #BAA588;
+    clip-path: ellipse(49% 2% at 50% 7%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ourValuesTitle,
+.ourMissionTitle {
+    position: relative;
+}
+
+.ourMissionAboutSectionDivider {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 3px;
+    background: #555555;
+    clip-path: ellipse(50% 50% at 50% 50%);
+    border: none;
+}
+
+.aboutSubtitle .firstSubtitle {
+    margin: 1rem 0;
+}
+
+.title {
+    position: relative;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.title p {
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.aboutSubtitle {
+    margin: 1rem auto;
+    max-width: 70%;
+    text-align: center;
+}
+
+.aboutSubtitle .firstSubtitle {
+    font-weight: 500;
+    color: #565656;
+    font-size: 1.8rem;
+}
+
+.aboutusContent {
+    margin-top: 2rem;
+    max-width: 85%;
+    border: 2px solid #C6BFB4;
+    padding: 2rem 4rem;
+    text-align: center;
+    border-radius: 20px;
+    background: #E3DCCC6B;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutusContent p {
+    width: 94%;
+    color: #565656;
+    font-size: 1rem;
+    margin: 1rem 0;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+
+.ourTeam {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.ourTeamSlider {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.controllers button {
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.whatWeDo {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.whatWeDoContent {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.whatWeDo .title p {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.ourMission,
+.ourValues {
+    flex: 1 1 calc(50% - 2rem);
+    border: 1px solid #C6BFB4;
+    padding: 2rem 3rem;
+    border-radius: 40px;
+    text-align: center;
+    height: 20rem;
+    min-width: 300px;
+    background-color: #EEE8DF;
+}
+
+.ourMissionContent,
+.ourValuesContent {
+    margin-top: 1.5rem;
+    color: #555555;
+    font-size: 0.9rem;
+}
+
+.ourMissionTitle p,
+.ourValuesTitle p {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .aboutSectionDivider {
+        width: 6rem;
+    }
+
+    .whatWeDo .title p {
+        width: 80%;
+    }
+
+    .aboutusContent {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .whatWeDoContent {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .ourMission,
+    .ourValues {
+        width: 100%;
+        padding: 1rem;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutSubtitle .firstSubtitle {
+        font-size: 1.5rem;
+    }
+
+    .aboutusContent {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    .aboutusContent p {
+        font-size: 0.9rem;
+    }
+
+    .whatWeDoContent {
+        padding: 0.5rem;
+    }
+
+    .ourMission,
+    .ourValues {
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Armenian:wght@100..900&display=swap');
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+#services {
+    width: 100%;
+}
+
+.servicesContent p {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 3rem;
+    color: #555555;
+    text-align: center;
+}
+
+
+#services .homeSectionDivider {
+    width: 8%;
+    margin: 0.3rem auto;
+    border: 0;
+    height: 4rem;
+    background: #BAA588;
+    clip-path: ellipse(49% 2% at 50% 7%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.servicesHomeSectionDivider {
+    width: 5rem;
+    margin: 0.3rem auto;
+    border: 0;
+    height: 4rem;
+    background: #777168;
+    clip-path: ellipse(49% 2% at 50% 7%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    margin: 0 auto;
+    width: 85%;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.serviceCategories {
+    position: relative;
+    width: 100%;
+    height: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #E1DACF;
+    color: #555555;
+}
+
+.serviceOverlay .serviceTitle {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    color: #777168;
+}
+
+.serviceOverlay .titleDivider {
+    color: #777168;
+    width: 50%;
+    height: 4rem;
+    clip-path: ellipse(49% 2% at 50% 8%);
+}
+
+.serviceOverlay .indicator {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border: 6px solid #F0E7E0;
+    background: linear-gradient(138.08deg, rgba(209, 69, 10, 0.617) 20.3%, rgba(216, 174, 126, 0.48) 86.92%);
+    border-radius: 50%;
+    right: -1%;
+    bottom: -1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/arrow.png');
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: center;
+}
+
+.serviceCategories img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 24rem;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.serviceOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.serviceTitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.titleDivider {
+    width: 50px;
+    height: 2px;
+    background-color: #777168;
+    border: none;
+    margin: 0.5rem auto;
+}
+
+.indicator {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border: 6px solid #F0E7E0;
+    background: linear-gradient(138.08deg, rgba(255, 242, 215, 0.48) 20.3%, rgba(216, 174, 126, 0.48) 86.92%);
+    border-radius: 50%;
+    right: -1%;
+    bottom: -1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/arrow.png');
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: center;
+}
+
+
+#portfolio {
+    margin-top: 5rem;
+    padding: 3rem 2rem;
+    width: 100%;
+    height: 48rem;
+    background: linear-gradient(109.57deg, #E3DCD2 4.93%, #D7D0C1 50.29%, #EBE2D9 93.42%);
+}
+
+#portfolio .homeSectionDivider {
+    width: 8%;
+    margin: 0.3rem auto;
+    border: 0;
+    height: 4rem;
+    background: #BAA588;
+    clip-path: ellipse(49% 2% at 50% 7%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#portfolio .servicesContent p {
+    color: #FFFFFF;
+    font-size: 2.2rem;
+}
+
+#portfolio .servicesContent {
+    margin-bottom: 1rem;
+}
+
+#aboutUs {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aboutUs .servicesContent {
+    text-align: center;
+}
+
+#aboutUs .servicesContent p {
+    font-size: 3rem;
+}
+
+#aboutUs .homeSectionDivider {
+    width: 8%;
+    margin: 0.3rem auto;
+    border: 0;
+    height: 4rem;
+    background: #BAA588;
+    clip-path: ellipse(49% 2% at 50% 7%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#aboutUs .aboutSubtitle {
+    margin: 0 auto;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+
+#aboutUs .aboutSubtitle .firstSubtitle {
+    font-weight: 500;
+    color: #565656;
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+#aboutUs .aboutSubtitle .secondSubtitle {
+    font-weight: 400;
+    color: #565656;
+    font-size: 1rem;
+}
+
+#aboutUs .aboutusContent {
+    margin-top: 2rem;
+    max-width: 85%;
+    border: 2px solid #8F897F;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    gap: 1rem;
+    background: #E3DCCC6B;
+}
+
+#aboutUs .aboutusContent p {
+    font-family: "Montserrat Alternates", sans-serif;
+    color: #565656;
+    font-size: 1rem;
+    line-height: 25.26px;
+    width: 97%;
+}
+
+#aboutUs .seeMoreBtn {
+    margin-top: 3rem;
+    position: relative;
+    border-radius: 0.4em;
+    background: transparent;
+    padding: 18px, 39px, 18px, 39px;
+    width: 210px;
+    height: 65px;
+    color: #F0E7E0;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777168;
+    font-size: 1.1rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#aboutUs .seeMoreBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 64px;
+    padding: 2px;
+    background: linear-gradient(97.37deg, #777168 2.35%, rgba(119, 113, 104, 0) 85.79%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+#blog {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+#blog .servicesContent {
+    margin-bottom: 2rem;
+}
+
+#blog .homeSectionDivider {
+    width: 8%;
+    margin: 0.3rem auto;
+    border: 0;
+    height: 4rem;
+    background: #BAA588;
+    clip-path: ellipse(49% 2% at 50% 7%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+@media (max-width: 768px) {
+
+
+    .servicesContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+
+    .servicesContent {
+        margin-bottom: 2rem;
+    }
+
+    .serviceCategories {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    /* #aboutUs .aboutSubtitle {
+        max-width: 90%;
+    } */
+
+    #aboutUs .aboutSubtitle .firstSubtitle {
+        font-size: 1rem;
+    }
+
+
+
+    #aboutUs .aboutSubtitle .secondSubtitle {
+        font-size: 0.9rem;
+        margin-top: 0;
+    }
+
+    #aboutUs .aboutusContent {
+        max-width: 90%;
+        padding: 1rem;
+        height: auto;
+    }
+
+    #aboutUs .aboutusContent p {
+        font-size: 0.9rem;
+    }
+
+    #aboutUs .seeMoreBtn {
+        width: 6rem;
+        font-size: 11px;
+    }
+
+    #aboutUs .servicesContent p {
+        font-size: 2rem;
+    }
+
+    #aboutUs .aboutSubtitle .firstSubtitle {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #aboutUs .homeSectionDivider {
+        width: 7rem;
+    }
+
+    #services .servicesContent .homeSectionDivider {
+        width: 6rem;
+    }
+
+    #portfolio .servicesContent .homeSectionDivider {
+        width: 6rem;
+    }
+
+    #blog .homeSectionDivider {
+        width: 5rem;
+    }
+
+    #blog .servicesContent p {
+        font-size: 2rem;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    #portfolio .servicesContent {
+        margin-bottom: 1rem;
+    }
+
+    #blog {
+        margin-bottom: 2rem;
+    }
+
+    #blog .servicesContent {
+        margin-bottom: 4rem;
+    }
+
+    #aboutUs .aboutSubtitle {
+        max-width: 95%;
+        gap: 1.5rem;
+    }
+
+    #aboutUs .aboutSubtitle .firstSubtitle {
+        font-size: 1.2rem;
+    }
+
+    #aboutUs .aboutSubtitle .secondSubtitle {
+        font-size: 0.8rem;
+    }
+
+    #aboutUs .aboutusContent {
+        max-width: 95%;
+        padding: 1rem;
+
+    }
+
+    #aboutUs .aboutusContent p {
+        font-size: 0.8rem;
+    }
+
+    #aboutUs .seeMoreBtn {
+        width: 6rem;
+        font-size: 10px;
+    }
+
+    #aboutUs .servicesContent {
+        margin-bottom: 1rem;
+    }
+
+    #aboutUs {
+        padding: 0 2rem;
+    }
+
+
+}
+
+@media (max-width: 1200px) {
+    .servicesContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .servicesContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .serviceCategories {
+        width: 100%;
+        height: auto;
+    }
+
+    .serviceOverlay .indicator {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicesContent p {
+        font-size: 1.8rem;
+    }
+
+    .serviceTitle {
+        font-size: 1rem;
+    }
+
+    .serviceOverlay .indicator {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
