@@ -31,6 +31,10 @@ function Navbar({ isModalOpen, openModal }) {
         openModal();
     };
 
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -44,29 +48,29 @@ function Navbar({ isModalOpen, openModal }) {
                 <div className={styles.navContent}>
                     <ul className={styles.navList}>
                         <li className={location.pathname === '/' ? styles.active : ''}>
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink to="/" onClick={closeMenu}>Home</NavLink>
                         </li>
                         <li className={location.pathname === '/service' ? styles.active : ''}>
-                            <NavLink to="/service">Service</NavLink>
+                            <NavLink to="/service" onClick={closeMenu}>Services</NavLink>
                         </li>
                         <li className={location.pathname === '/portfolio' ? styles.active : ''}>
-                            <NavLink to="/portfolio">Portfolio</NavLink>
+                            <NavLink to="/portfolio" onClick={closeMenu}>Portfolio</NavLink>
                         </li>
                     </ul>
                     <div className={styles.navbarCurve}>
-                        <NavLink to="/">
+                        <NavLink to="/" onClick={closeMenu}>
                             <img src={logo} alt="logo" className={styles.logo}/>
                         </NavLink>
                     </div>
                     <ul className={styles.navList}>
                         <li className={location.pathname === '/about' ? styles.active : ''}>
-                            <NavLink to="/about">About Us</NavLink>
+                            <NavLink to="/about" onClick={closeMenu}>About Us</NavLink>
                         </li>
                         <li className={location.pathname === '/blog' ? styles.active : ''}>
-                            <NavLink to="/blog">Blog</NavLink>
+                            <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
                         </li>
                         <li className={location.pathname === '/contact' ? styles.active : ''}>
-                            <a onClick={handleOpenModal}>Contact Us</a>
+                            <a onClick={() => { handleOpenModal(); closeMenu(); }}>Contact Us</a>
                         </li>
                     </ul>
                     <img
@@ -80,10 +84,10 @@ function Navbar({ isModalOpen, openModal }) {
             {menuOpen && (
                 <div className={styles.mobileMenu}>
                     <ul>
-                        <li><NavLink to="/service">Service</NavLink></li>
-                        <li><NavLink to="/portfolio">Portfolio</NavLink></li>
-                        <li><NavLink to="/about">About Us</NavLink></li>
-                        <li><a onClick={handleOpenModal}>Contact Us</a></li>
+                        <li><NavLink to="/service" onClick={closeMenu}>Service</NavLink></li>
+                        <li><NavLink to="/portfolio" onClick={closeMenu}>Portfolio</NavLink></li>
+                        <li><NavLink to="/about" onClick={closeMenu}>About Us</NavLink></li>
+                        <li><a onClick={() => { handleOpenModal(); closeMenu(); }}>Contact Us</a></li>
                     </ul>
                 </div>
             )}
@@ -92,3 +96,4 @@ function Navbar({ isModalOpen, openModal }) {
 }
 
 export default Navbar;
+

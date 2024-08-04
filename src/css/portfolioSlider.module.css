@@ -5,16 +5,20 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    max-width: 100%;
+    max-width: 80%;
+    margin: auto;
 }
+
 .sliderContainer {
-    max-width: 100%;
+    max-width: 1200px;
+    width: 100%;
     min-width: 0;
-    height: 90%;
+    height: auto;
     text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    overflow: visible;
+    overflow: hidden;
     position: relative;
     margin-top: 3rem;
 }
@@ -27,16 +31,8 @@
     align-items: center;
     position: relative;
     margin: 2em 0;
-    overflow: visible;
+    overflow: hidden; /* Change overflow to hidden */
     transition: all 0.3s ease-in-out;
-}
-
-.slides {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    overflow: visible;
-    position: relative;
 }
 
 .slide {
@@ -44,18 +40,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 300ms;
+    transition: opacity 300ms, transform 300ms; /* Add transform transition */
     height: 25rem;
     margin-bottom: 3rem;
-    overflow: visible;
+    overflow: hidden; /* Change overflow to hidden */
     z-index: 0;
     opacity: 0.8;
-
 }
 
-.activeSlide {
+.swiper-slide-active {
+    transform: scale(1.2) translateY(20px); /* Scale up and lower the active slide */
+    z-index: 1;
     opacity: 1;
-    z-index: 2;
 }
 
 .slideText {
@@ -91,13 +87,13 @@
     z-index: 1;
 }
 
-.activeSlide .slideBackground {
+.swiper-slide-active .slideBackground {
     height: 28rem;
     width: 25rem;
     border-radius: 10%;
 }
 
-.activeSlide .slideImage {
+.swiper-slide-active .slideImage {
     transform: scale(1.3);
     position: absolute;
     top: 50%;
@@ -106,31 +102,34 @@
 }
 
 .controllers {
-    margin-top: 20rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Center the controllers */
     align-items: center;
-    width: 88%;
+    width: 100%; /* Make the controllers take the full width */
     margin-top: 1em;
 }
-
 .sliderBtn {
     border: 1px solid #574B44;
-    padding: 1rem;
+    padding: 1rem 2rem;
     cursor: pointer;
     outline: none;
     border-radius: 50px;
     transition: background-color 300ms;
-    width: 6rem;
     background-color: #E1DACF;
     text-align: center;
+}
+.viewMoreContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
 }
 
 .viewMoreBtn {
     position: relative;
     border-radius: 0.4em;
     background: transparent;
-    padding: 18px, 39px, 18px, 39px;
+    padding: 18px 39px;
     width: 210px;
     height: 65px;
     color: #F0E7E0;
@@ -164,12 +163,8 @@
     z-index: -1;
 }
 
-
-
 @media (max-width: 768px) {
-
-
-    .slides {
+    .swiper-wrapper {
         grid-template-columns: 1fr;
     }
 
@@ -177,33 +172,22 @@
         opacity: 1;
     }
 
-    .controllers {
-        flex-direction: row;
-        justify-content: space-between;
+    .viewMoreContainer {
+        margin-top: 1rem;
     }
 
-    .sliderBtn,
-    .seeMoreBtn {
-        flex: 1;
-        margin: 0 0.5em;
+    .swiper-slide-active {
+        transform: scale(1) translateY(0); /* Scale and position adjustments for mobile */
     }
 
-    .slide:not(.activeSlide) {
-        display: none;
-    }
-
-    .activeSlide {
-        transform: scale(1);
-    }
-
-    .activeSlide .slideBackground {
+    .swiper-slide-active .slideBackground {
         width: 300px;
         height: 350px;
     }
 }
 
 @media (max-width: 480px) {
-    .slides {
+    .swiper-wrapper {
         grid-template-columns: 1fr;
     }
 
@@ -212,19 +196,8 @@
         opacity: 1;
     }
 
-    .controllers {
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: -5px;
-    }
-
-
-
-
-    .sliderBtn,
-    .viewMoreBtn {
-        flex: 1;
-        margin: 0 0.5em;
+    .viewMoreContainer {
+        margin-top: 1rem;
     }
 
     .viewMoreBtn {
@@ -233,15 +206,11 @@
         padding: 1.5rem;
     }
 
-    .slide:not(.activeSlide) {
-        display: none;
+    .swiper-slide-active {
+        transform: scale(1) translateY(0); /* Scale and position adjustments for mobile */
     }
 
-    .activeSlide {
-        transform: scale(1);
-    }
-
-    .activeSlide .slideBackground {
+    .swiper-slide-active .slideBackground {
         width: 300px;
         height: 350px;
     }
@@ -252,7 +221,7 @@
 }
 
 @media (max-width: 1200px) {
-    .slides {
+    .swiper-wrapper {
         grid-template-columns: 1fr;
     }
 
@@ -260,26 +229,15 @@
         opacity: 1;
     }
 
-    .controllers {
-        flex-direction: row;
-        justify-content: space-between;
+    .viewMoreContainer {
+        margin-top: 1rem;
     }
 
-    .sliderBtn,
-    .seeMoreBtn {
-        flex: 1;
-        margin: 0 0.5em;
+    .swiper-slide-active {
+        transform: scale(1) translateY(0); /* Scale and position adjustments for mobile */
     }
 
-    .slide:not(.activeSlide) {
-        display: none;
-    }
-
-    .activeSlide {
-        transform: scale(1);
-    }
-
-    .activeSlide .slideBackground {
+    .swiper-slide-active .slideBackground {
         width: 300px;
         height: 350px;
     }

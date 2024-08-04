@@ -52,7 +52,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 20px;
     margin: 0 auto;
     width: 85%;
     margin-top: 2rem;
@@ -91,7 +90,7 @@
     width: 4rem;
     height: 4rem;
     border: 6px solid #F0E7E0;
-    background: linear-gradient(138.08deg, rgba(209, 69, 10, 0.617) 20.3%, rgba(216, 174, 126, 0.48) 86.92%);
+    /*background: linear-gradient(138.08deg, rgba(209, 69, 10, 0.617) 20.3%, rgba(216, 174, 126, 0.48) 86.92%);*/
     border-radius: 50%;
     right: -1%;
     bottom: -1%;
@@ -108,9 +107,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-width: 24rem;
-    object-fit: contain;
     max-width: 100%;
+    background-position: center;
 }
 
 .serviceOverlay {
@@ -139,7 +137,7 @@
     width: 4rem;
     height: 4rem;
     border: 6px solid #F0E7E0;
-    background: linear-gradient(138.08deg, rgba(255, 242, 215, 0.48) 20.3%, rgba(216, 174, 126, 0.48) 86.92%);
+    /*background: linear-gradient(138.08deg, rgba(255, 242, 215, 0.48) 20.3%, rgba(216, 174, 126, 0.48) 86.92%);*/
     border-radius: 50%;
     right: -1%;
     bottom: -1%;
@@ -224,7 +222,7 @@
 
 
 #aboutUs .aboutSubtitle .firstSubtitle {
-    font-weight: 500;
+    /*font-weight: 500;*/
     color: #565656;
     font-size: 2rem;
     margin-top: 3rem;
@@ -266,10 +264,9 @@
     position: relative;
     border-radius: 0.4em;
     background: transparent;
-    padding: 18px, 39px, 18px, 39px;
+    padding: 18px 39px 18px 39px;
     width: 210px;
     height: 65px;
-    color: #F0E7E0;
     border: 2px solid transparent;
     background-clip: padding-box;
     z-index: 1;
@@ -293,7 +290,7 @@
     border-radius: 64px;
     padding: 2px;
     background: linear-gradient(97.37deg, #777168 2.35%, rgba(119, 113, 104, 0) 85.79%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;

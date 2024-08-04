@@ -1,5 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import EmailJS from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import styles from '../css/contactUs.module.css';
 import phone from '../assets/phone.png';
 import message from '../assets/message.png';
@@ -7,9 +9,9 @@ import location from '../assets/location.png';
 import instagram from '../assets/Instagram.png';
 import discord from '../assets/Discord.png';
 import twitter from '../assets/twitter.png';
-import ring from '../assets/ring.png'
-import letterSend from '../assets/letter_send 1.png'
-import closeBtn from '../assets/closeBtn.svg'
+import ring from '../assets/ring.png';
+import letterSend from '../assets/letter_send 1.png';
+import closeBtn from '../assets/closeBtn.svg';
 
 function ContactUsModal({ isOpen, onClose }) {
     const [formData, setFormData] = useState({
@@ -17,12 +19,9 @@ function ContactUsModal({ isOpen, onClose }) {
         lastName: '',
         email: '',
         phone: '',
-        service: [], // Array to store selected services
+        service: [],
         message: '',
     });
-    const [errorMessage, setErrorMessage] = useState('');
-    const [successMessage, setSuccessMessage] = useState('');
-
 
     const handleChange = (event) => {
         const { name, value, type } = event.target;
@@ -38,11 +37,11 @@ function ContactUsModal({ isOpen, onClose }) {
         const { firstName, lastName, email, phone, service, message } = formData;
 
         if (!email || !message) {
-            setErrorMessage('Please fill in your email and message.');
+            toast.error('Please fill in your email and message.');
             return;
         }
 
-        const serviceList = service.join(', '); // Combine selected services into a string
+        const serviceList = service.join(', ');
 
         const templateParams = {
             from_name: `${firstName} ${lastName}`,
@@ -53,22 +52,21 @@ function ContactUsModal({ isOpen, onClose }) {
         };
 
         EmailJS.send(
-            'service_g47e02d', // Replace with your EmailJS service ID
-            'template_akkueoq', // Replace with your EmailJS template ID
+            'service_g47e02d',
+            'template_akkueoq',
             templateParams,
-            '1Y7XlOdaLi1u0QuSz' // Replace with your EmailJS user ID
+            '1Y7XlOdaLi1u0QuSz'
         )
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
-                setSuccessMessage('Your message has been sent successfully!');
-                setFormData({ firstName: '', lastName: '', email: '', phone: '', service: [], message: '' }); // Clear form after successful submission
+                toast.success('Your message has been sent successfully!');
+                setFormData({ firstName: '', lastName: '', email: '', phone: '', service: [], message: '' });
             })
             .catch((err) => {
                 console.error('FAILED...', err);
-                setErrorMessage('An error occurred. Please try again later.');
+                toast.error('An error occurred. Please try again later.');
             });
     };
-
 
     useEffect(() => {
         if (isOpen) {
@@ -81,12 +79,13 @@ function ContactUsModal({ isOpen, onClose }) {
             document.body.style.overflow = 'auto';
         };
     }, [isOpen]);
+
     if (!isOpen) return null;
 
     return (
         <div className={styles.overlay}>
+            <ToastContainer />
             <div className={styles.contactUs}>
-                {/* Close button */}
                 <button className={styles.closeButton} onClick={onClose}>
                     <img src={closeBtn} alt="Close" className={styles.closeButton} />
                 </button>
@@ -94,7 +93,6 @@ function ContactUsModal({ isOpen, onClose }) {
                 <div className={styles.contactInformation}>
                     <div className={styles.contactTitles}>
                         <div className={styles.title}>Contact Information</div>
-                        <div className={styles.subtitle}>Say something to start a live chat!</div>
                     </div>
                     <div className={styles.contactDetails}>
                         <div className={styles.detailItem}>
@@ -103,7 +101,7 @@ function ContactUsModal({ isOpen, onClose }) {
                         </div>
                         <div className={styles.detailItem}>
                             <img src={message} alt="Email" />
-                            <span>demo@gmail.com</span>
+                            <span>hello@sirunyan.com</span>
                         </div>
                         <div className={styles.detailItem}>
                             <img src={location} alt="Location" />
@@ -198,27 +196,57 @@ function ContactUsModal({ isOpen, onClose }) {
                                     3D Modeling
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="service" value="sculpting"/>
+                                    <input
+                                        type="checkbox"
+                                        name="service"
+                                        value="sculpting"
+                                        checked={formData.service.includes('sculpting')}
+                                        onChange={handleChange}
+                                    />
                                     <span className={styles.customCheckbox}></span>
                                     Sculpting
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="service" value="rendering"/>
+                                    <input
+                                        type="checkbox"
+                                        name="service"
+                                        value="rendering"
+                                        checked={formData.service.includes('rendering')}
+                                        onChange={handleChange}
+                                    />
                                     <span className={styles.customCheckbox}></span>
                                     Rendering
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="service" value="web"/>
+                                    <input
+                                        type="checkbox"
+                                        name="service"
+                                        value="web"
+                                        checked={formData.service.includes('web')}
+                                        onChange={handleChange}
+                                    />
                                     <span className={styles.customCheckbox}></span>
                                     Rendering for Websites and SMM
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="service" value="animation"/>
+                                    <input
+                                        type="checkbox"
+                                        name="service"
+                                        value="animation"
+                                        checked={formData.service.includes('animation')}
+                                        onChange={handleChange}
+                                    />
                                     <span className={styles.customCheckbox}></span>
                                     Animations
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="service" value="other"/>
+                                    <input
+                                        type="checkbox"
+                                        name="service"
+                                        value="other"
+                                        checked={formData.service.includes('other')}
+                                        onChange={handleChange}
+                                    />
                                     <span className={styles.customCheckbox}></span>
                                     Other
                                 </label>
@@ -236,15 +264,13 @@ function ContactUsModal({ isOpen, onClose }) {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className={styles.sendMessageButton}>
-                            <button type="submit">Send Message</button>
+                        <div className={styles.sendMessageButtonContainer}>
+                            <button type="submit" className={styles.sendMessageButton} id="sendMessageButton">Send Message</button>
+                            <label htmlFor="sendMessageButton" className={styles.letterSendLabel}>
+                                <img src={letterSend} alt="Letter Send" className={styles.letterSend}/>
+                            </label>
                         </div>
-                        {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
-                        {successMessage && <div className={styles.successMessage}>{successMessage}</div>}
                     </form>
-
-
-                    <img src={letterSend} alt="Letter Send" className={styles.letterSend}/>
                 </div>
             </div>
         </div>

@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from '../css/services.module.css'
 import ServicesItem from '../components/ServicesItem'; //Child Element
-import img1 from '../images/servicesImg1.png'
-import img2 from '../images/servicesImg2.png'
-import img3 from '../images/servicesImg3.png'
-import img4 from '../images/servicesImg4.png'
-import img5 from '../images/servicesImg5.png'
-import img6 from '../images/servicesImg6.png'
+import img1 from '../images/servicesImg1.jpg'
+import img2 from '../images/servicesImg2.jpg'
+import img3 from '../images/servicesImg3.jpg'
+import img4 from '../images/servicesImg4.jpg'
+import img5 from '../images/servicesImg5.jpg'
+import img6 from '../images/servicesImg6.jpg'
 
 
 

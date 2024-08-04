@@ -6,9 +6,7 @@ function ElipseBackground() {
         <div>
             <div className={styles.elipsBg}></div>
 
-
-
-        </div >
+        </div>
 
     )
 }
