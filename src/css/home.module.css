@@ -20,6 +20,15 @@
     color: #555555;
     text-align: center;
 }
+.imageContainer {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
 
 
 #services .homeSectionDivider {

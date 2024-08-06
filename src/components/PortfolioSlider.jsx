@@ -31,11 +31,11 @@ const PortfolioSlider = () => {
                     centeredSlides={true}
                     slidesPerView={'auto'}
                     loop={true}
-                    spaceBetween={10}
+                    spaceBetween={0}
                     coverflowEffect={{
                         rotate: 0,
-                        stretch: 10,
-                        depth: 250,
+                        stretch: 0,
+                        depth: 350,
                         modifier: 1,
                         slideShadows: false,
                     }}
@@ -53,7 +53,7 @@ const PortfolioSlider = () => {
                             slidesPerView: 1,
                         },
                         1200: {
-                            slidesPerView: 3,
+                            slidesPerView: 2,
                         },
                     }}
                 >
@@ -69,7 +69,7 @@ const PortfolioSlider = () => {
                             <div
                                 className={styles.slideBackground}
                                 style={{
-                                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${slide.background})`
+                                    backgroundImage: `linear-gradient(155.18deg, rgba(5, 5, 5, 0.19) 0%, rgba(5, 5, 5, 0) 76.84%), url(${slide.background})`
                                 }}
                             >
                                 <img

@@ -17,16 +17,16 @@
 .image-container {
     width: 50%;
     position: relative;
-    border-radius: 20px;
+    border-radius: 40px;
     z-index: 2;
-    overflow: hidden; /* Ensures child elements respect the border radius */
+    overflow: hidden;
 }
 
 .image {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 20px; /* Ensures the image itself has the border radius */
+    border-radius: 40px;
 }
 
 .image-container::before,
@@ -42,12 +42,13 @@
 
 .image-container::before {
     top: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    background: linear-gradient(to bottom, rgba(161, 120, 80, 0.6), rgba(0, 0, 0, 0));
 }
 
 .image-container::after {
     bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgba(161, 120, 80, 0.6), rgba(0, 0, 0, 0));
+
 }
 
 .title-overlay {
@@ -61,8 +62,8 @@
     text-align: center;
     font-size: 1.2rem;
     font-weight: 500;
-    z-index: 4; /* Ensure it overlays the gradient */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .reversed .title-overlay {
@@ -95,7 +96,7 @@
 .reversed .text-container {
     margin-left: 0;
     margin-right: -10px;
-    justify-content: flex-end; /* Aligns the text to the right for reversed layout */
+    justify-content: flex-end;
 }
 
 .text {
@@ -107,12 +108,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Aligns text to the left */
+    align-items: flex-start;
     line-height: 26px;
 }
 
 .reversed .text {
-    align-items: flex-end; /* Aligns text to the right for reversed layout */
+    align-items: flex-end;
     text-align: right;
 }
 

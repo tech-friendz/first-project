@@ -56,18 +56,20 @@ function Home() {
 
                 <div className={styles.servicesContent}>
                     <p>Services</p>
-                    <hr className={styles.homeSectionDivider} />
+                    <hr className={styles.homeSectionDivider}/>
                 </div>
 
                 <div className={styles.servicesContainer}>
                     {services.map((service, index) => (
                         <div className={styles.serviceCategories} key={index}>
-                            <img src={service.img} alt={service.title} />
-                            <div className={styles.serviceOverlay}>
-                                <div className={styles.serviceTitle}>{service.title}</div>
-                                <hr className={styles.servicesHomeSectionDivider} />
-                            </div>
-                            <NavLink to="/portfolio" state={{ category: service.title }}>
+                            <NavLink to="/portfolio" state={{category: service.title}}>
+                                <div className={styles.imageContainer}>
+                                    <img src={service.img} alt={service.title}/>
+                                </div>
+                                <div className={styles.serviceOverlay}>
+                                    <div className={styles.serviceTitle}>{service.title}</div>
+                                    <hr className={styles.servicesHomeSectionDivider}/>
+                                </div>
                                 <div className={styles.indicator}></div>
                             </NavLink>
                         </div>
@@ -79,15 +81,15 @@ function Home() {
             <section id={styles.portfolio}>
                 <div className={styles.servicesContent}>
                     <p>Portfolio</p>
-                    <hr className={styles.homeSectionDivider} />
+                    <hr className={styles.homeSectionDivider}/>
                 </div>
-                <PortfolioSlider />
+                <PortfolioSlider/>
             </section>
 
             <section id={styles.aboutUs}>
                 <div className={styles.servicesContent}>
                     <p>About Us</p>
-                    <hr className={styles.homeSectionDivider} />
+                    <hr className={styles.homeSectionDivider}/>
                 </div>
                 <div className={styles.aboutSubtitle}>
                     <p className={styles.firstSubtitle}>Hi, so good to see you here!</p>
@@ -95,7 +97,8 @@ function Home() {
                 </div>
 
                 <div className={styles.aboutusContent}>
-                    <p>Welcome to Sirunyan Jewelry and Accessories CAD Studio, where the elegance of traditional jewelry design meets the precision of modern digital technology. At Sirunyan, we specialize in providing computer-aided design (CAD) services tailored specifically for the jewelry and accessories industry. Our expertise lies in transforming and beautifying creative visions into detailed digital blueprints, ensuring each piece is crafted with the highest level of accuracy, beauty and care. Our personalized approach means that every client receives individual attention and bespoke solutions tailored to their specific needs. We are not just a CAD studio; we are a partner in your creative journey, dedicated to helping you achieve perfection in every piece of jewelry you design.</p>
+                    <p>Welcome to Sirunyan Jewelry and Accessories CAD Studio, where the elegance of traditional jewelry
+                        design meets the precision of modern digital technology. At Sirunyan, we specialize in providing computer-aided design (CAD) services tailored specifically for the jewelry and accessories industry. Our expertise lies in transforming and beautifying creative visions into detailed digital blueprints, ensuring each piece is crafted with the highest level of accuracy, beauty and care. Our personalized approach means that every client receives individual attention and bespoke solutions tailored to their specific needs. We are not just a CAD studio; we are a partner in your creative journey, dedicated to helping you achieve perfection in every piece of jewelry you design.</p>
                 </div>
 
                 <Link to='/about' className={styles.seeMoreBtn}>view more</Link>
