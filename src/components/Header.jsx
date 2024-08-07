@@ -2,11 +2,11 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from '../css/header.module.css';
 import video from '../assets/video.mp4';
-import headerBanner from '../assets/headerBanner.png';
+// import headerBanner from '../assets/headerBanner.png';
 import blogBanner from '../images/Blog-banner.png';
 import portfolioBanner from '../images/portfolio-banner.png';
 import servicesBanner from '../images/Services-Banner.png';
-import aboutusBanner from '../images/aboutus-banner.png';
+import aboutusBanner from '../images/footerSlider2.jpg';
 
 function Header({ openModal }) {
     const location = useLocation();
@@ -16,7 +16,7 @@ function Header({ openModal }) {
             type: 'video',
             src: video,
             alt: 'Home Video',
-            title: 'Bringing Your Jewelry Dreams to Life',
+            title: 'The beautiful language of your imagination',
             showButton: true,
         },
         '/blog': {
@@ -40,7 +40,7 @@ function Header({ openModal }) {
             type: 'image',
             src: servicesBanner,
             alt: 'Services Banner',
-            title: 'Enhancing the beauty through digital expertise',
+            title: 'The Art of Beautifying Through Digital Expertise',
             showButton: true,
         },
         '/about': {

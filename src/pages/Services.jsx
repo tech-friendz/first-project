@@ -1,24 +1,23 @@
-import React from 'react'
-import styles from '../css/services.module.css'
-import ServicesItem from '../components/ServicesItem'; //Child Element
-import img1 from '../images/servicesImg1.jpg'
-import img2 from '../images/servicesImg2.jpg'
-import img3 from '../images/servicesImg3.jpg'
-import img4 from '../images/servicesImg4.jpg'
-import img5 from '../images/servicesImg5.jpg'
-import img6 from '../images/servicesImg6.jpg'
-
-
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from '../css/services.module.css';
+import ServicesItem from '../components/ServicesItem';
+import img1 from '../images/servicesImg1.jpg';
+import img2 from '../images/servicesImg2.jpg';
+import img3 from '../images/servicesImg3.jpg';
+import img4 from '../images/servicesImg4.jpg';
+import img5 from '../images/servicesImg5.jpg';
+import img6 from '../images/servicesImg6.jpg';
 
 const services = [
     {
         image: img1,
         title: 'Sketching',
-        description: 'Transform your vision into exquisite jewelry pieces with our sketching services. As the first phase of the jewelry computer-aided design process, our detailed sketches lay the foundation for intricate 3D modeling. Collaborate with our sketchers to express your dream jewelry, ensuring every detail is captured before the magic of modeling begins.'
+        description: 'Transform your vision into exquisite jewelry pieces with our sketching services. As the first phase of the jewelry computer-aided design process, our detailed sketches lay the foundation for intricate 3D modeling. Collaborate with our sketchers to express your dream jewelry, ensuring every detail is captured before the magic of modeling begins.'
     },
     {
         image: img2,
-        title: '3D Modeling',
+        title: '3D modeling',
         description: 'Second phase of our comprehensive jewelry CAD services: 3D Modeling. After our initial sketching phase, we bring your jewelry designs to life with 3D modeling. Our skilled professionals create ready-to-print 3D models not only of jewelry pieces but also fashion accessories, ensuring every intricate detail is perfected before moving on to production.'
     },
     {
@@ -33,17 +32,23 @@ const services = [
     },
     {
         image: img5,
-        title: 'Rendering for Website and SMM',
+        title: 'Rendering & more for websites and smm',
         description: 'Tailored for social media marketing and website use, our rendering services create photorealistic images in digital studios that capture and highlight every intricate detail of your jewelry and accessories. These striking visuals elevate your brand’s digital presence, making your designs stand out and engage your audience with aesthetics and elegance.'
     },
     {
         image: img6,
-        title: 'Animation',
+        title: 'Animations',
         description: 'Second phase of our comprehensive jewelry CAD services: 3D Modeling. After our initial sketching phase, we bring your jewelry designs to life with 3D modeling. Our skilled professionals create ready-to-print 3D models not only of jewelry pieces but also fashion accessories, ensuring every intricate detail is perfected before moving on to production.'
     },
 ];
 
 function Services() {
+    const navigate = useNavigate();
+
+    const handleImageClick = (category) => {
+        navigate('/portfolio', { state: { category } });
+    };
+
     return (
         <div className={styles.container}>
             {services.map((service, index) => (
@@ -53,10 +58,11 @@ function Services() {
                     title={service.title}
                     description={service.description}
                     isReversed={index % 2 !== 0}
+                    onClick={() => handleImageClick(service.title)}
                 />
             ))}
         </div>
-    )
+    );
 }
 
-export default Services
+export default Services;

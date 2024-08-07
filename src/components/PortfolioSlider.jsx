@@ -7,19 +7,17 @@ import styles from '../css/portfolioSlider.module.css';
 import ring1 from '../images/ring1.png';
 import ring2 from '../images/ring2.png';
 import ring3 from '../images/ring3.png';
-import bg2 from '../images/bg2.png';
+import ring4 from '../images/ring4.png';
+import ring5 from '../images/ring5.png';
 import {EffectCoverflow} from "swiper/modules";
 
 const PortfolioSlider = () => {
     const slides = [
-        { image: ring1, background: bg2 },
-        { image: ring2, background: bg2 },
-        { image: ring1, background: bg2 },
-        { image: ring3, background: bg2 },
-        { image: ring2, background: bg2 },
-        { image: ring3, background: bg2 },
-        { image: ring3, background: bg2 },
-        { image: ring3, background: bg2 },
+        { image: ring1, title: "From Idea to Visualisation" },
+        { image: ring2, title: "From Idea to Visualisation" },
+        { image: ring3, title: "From Idea to Visualisation" },
+        { image: ring4, title: "From Idea to Visualisation" },
+        { image: ring5, title: "From Idea to Visualisation" },
     ];
 
     return (
@@ -69,7 +67,7 @@ const PortfolioSlider = () => {
                             <div
                                 className={styles.slideBackground}
                                 style={{
-                                    backgroundImage: `linear-gradient(155.18deg, rgba(5, 5, 5, 0.19) 0%, rgba(5, 5, 5, 0) 76.84%), url(${slide.background})`
+                                    backgroundImage: `linear-gradient(155.18deg, rgba(5, 5, 5, 0.19) 0%, rgba(5, 5, 5, 0) 76.84%)`
                                 }}
                             >
                                 <img
@@ -79,7 +77,7 @@ const PortfolioSlider = () => {
                                 />
                             </div>
                             <div className={styles.slideText}>
-                                Wedding Ring
+                                {slide.title}
                             </div>
                         </SwiperSlide>
                     ))}

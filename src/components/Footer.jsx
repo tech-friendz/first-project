@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from '../css/footer.module.css';
 import logo from '../assets/logo.png';
-import twitter from '../assets/twitter.png';
-import instagram from '../assets/Instagram.png';
-import discord from '../assets/Discord.png';
+// import twitter from '../assets/twitter.png';
+import linkedIn from '../assets/linkedIn.jpg';
+// import instagram from '../assets/Instagram.png';
+// import discord from '../assets/Discord.png';
 import { Link } from 'react-router-dom';
 
 function Footer({ openModal }) {
@@ -30,9 +31,11 @@ function Footer({ openModal }) {
                         <Link to={'/blog'}>Blog</Link>
                     </nav>
                     <div className={styles.footerSocial}>
-                        <a href={''}><img src={twitter} alt="Twitter" /></a>
-                        <a href={''}><img src={instagram} alt="Instagram" /></a>
-                        <a href={''}><img src={discord} alt="Discord" /></a>
+                        <a target="_blank" href={'https://www.linkedin.com/in/tatev-sirunyan/'}>
+                            <img src={linkedIn} alt="LinkedIn" />
+                        </a>
+                        {/*<a href={''}><img src={instagram} alt="Instagram" /></a>*/}
+                        {/*<a href={''}><img src={discord} alt="Discord" /></a>*/}
                     </div>
                 </div>
             </footer>

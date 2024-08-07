@@ -1,6 +1,12 @@
+.elipsWrapper {
+    position: relative;
+    width: 100%;
+    height: 6rem; /* Adjust the height to match the elipsBg */
+}
+
 .elipsBg {
     width: 100%;
-    height: 3rem;
+    height: 6rem; /* Height to match the elipsWrapper */
     background-color: #F0E7E0;
     position: relative;
 }
@@ -13,9 +19,20 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 3rem;
+    height: 6rem; /* Adjusted height to match the parent */
     background-color: #F0E7E0;
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    border-radius: 50% / 100% 100% 0 0; /* Adjusted border-radius */
     z-index: 0;
 }
 
+.elipsOverlay {
+    position: absolute;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    background-color: rgba(240, 231, 224, 0.5);
+    backdrop-filter: blur(1px);
+    border-radius: 50% / 100% 100% 0 0;
+    z-index: 1;
+}

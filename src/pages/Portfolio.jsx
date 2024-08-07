@@ -80,7 +80,7 @@ function Portfolio() {
     const categories = ['Sketching', '3D modeling', 'Sculpting', 'Rendering', 'Rendering & more for websites and smm', 'Animations'];
 
     const imagesByCategory = {
-        'Sketching': [portfolioImg1],
+        'Sketching': [portfolioImg1, portfolioImg2, portfolioImg3 ],
         '3D modeling': [
             modelingImg1, modelingImg2, modelingImg3, modelingImg4, modelingImg5, modelingImg6, modelingImg7, modelingImg8, modelingImg9, modelingImg10, modelingImg11, modelingImg12, modelingImg14, modelingImg15,
         ],
@@ -90,7 +90,7 @@ function Portfolio() {
         'Rendering': [
             renderImg1, renderImg2, renderImg3, renderImg4, renderImg5, renderImg6, renderImg7, renderImg8, renderImg9, renderImg10, renderIm11, renderImg12, renderImg13, renderImg14, renderImg15, renderImg16, renderImg17, renderImg18, renderImg19, renderImg20, renderImg21, renderImg22, renderImg23, renderImg24,
         ],
-        'Rendering & more for websites and smm': [portfolioImg3, portfolioImg1, portfolioImg2],
+        'Rendering & more for websites and smm': [renderImg20, renderImg21, renderImg22, renderImg23, renderImg24, ],
         'Animations': [portfolioImg1, portfolioImg2, portfolioImg3],
     };
 
@@ -166,15 +166,15 @@ function Portfolio() {
                 breakpoints={{
                     480: {
                         slidesPerView: 1,
-                        grid: {rows: 1},
+                        grid: { rows: 1 },
                     },
                     768: {
                         slidesPerView: 2,
-                        grid: {rows: 2},
+                        grid: { rows: 2 },
                     },
                     1024: {
                         slidesPerView: 3,
-                        grid: {rows: 2},
+                        grid: { rows: 2 },
                     },
                 }}
                 spaceBetween={20}
@@ -186,8 +186,7 @@ function Portfolio() {
             >
                 {imagesByCategory[selectedCategory].map((img, index) => (
                     <SwiperSlide key={index} className={styles.slideBlock} onClick={() => openModal(img)}>
-                        <img src={img} alt={`Portfolio ${index + 1}`} className={styles.portfolioImage}
-                             onLoad={handleImageLoad}/>
+                        <img src={img} alt={`Portfolio ${index + 1}`} className={styles.portfolioImage} onLoad={handleImageLoad} />
                         <div className={styles.hoverEffect}>
                             <button className={styles.seeButton}><img src={seePhoto} alt=""/></button>
                         </div>

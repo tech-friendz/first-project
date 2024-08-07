@@ -27,6 +27,7 @@
     height: auto;
     display: block;
     border-radius: 40px;
+    cursor: pointer;
 }
 
 .image-container::before,
@@ -48,39 +49,45 @@
 .image-container::after {
     bottom: 0;
     background: linear-gradient(to top, rgba(161, 120, 80, 0.6), rgba(0, 0, 0, 0));
-
 }
 
 .title-overlay {
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
     font-weight: 500;
     z-index: 4;
-    background: rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
 }
 
-.reversed .title-overlay {
-    left: 50%;
-    transform: translateX(-50%);
+.left .title-overlay {
+    left: 0;
+}
+
+.right .title-overlay {
+    right: 0;
+    text-align: right;
 }
 
 .serviceSectionDivider {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 5rem;
     height: 3px;
     background: #fff;
     clip-path: ellipse(50% 50% at 50% 50%);
     border: none;
+    margin-top: 5px;
+}
+
+.left .serviceSectionDivider {
+    margin-left: 0;
+}
+
+.right .serviceSectionDivider {
+    margin-right: 0;
 }
 
 .text-container {

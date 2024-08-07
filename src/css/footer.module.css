@@ -141,7 +141,12 @@
 .footerSocial a:hover {
     color: #555;
 }
-
+.footerSocial img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .footerContainer .logo {
     width: 13rem;
 }

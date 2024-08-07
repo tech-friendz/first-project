@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import styles from '../css/navbar.module.css';
 import logo from '../assets/logo.png';
 import menu from '../assets/menu-svg.svg';
@@ -8,6 +8,7 @@ function Navbar({ isModalOpen, openModal }) {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -42,6 +43,16 @@ function Navbar({ isModalOpen, openModal }) {
         };
     }, []);
 
+    const scrollToBlogSection = () => {
+        navigate('/');
+        setTimeout(() => {
+            const blogSection = document.getElementById('blogSection');
+            if (blogSection) {
+                blogSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100); // Delay to ensure navigation completes
+    };
+
     return (
         <div className={`${styles.navContainer} ${isModalOpen ? styles.hidden : ''}`}>
             <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
@@ -59,7 +70,7 @@ function Navbar({ isModalOpen, openModal }) {
                     </ul>
                     <div className={styles.navbarCurve}>
                         <NavLink to="/" onClick={closeMenu}>
-                            <img src={logo} alt="logo" className={styles.logo}/>
+                            <img src={logo} alt="logo" className={styles.logo} />
                         </NavLink>
                     </div>
                     <ul className={styles.navList}>
@@ -67,7 +78,7 @@ function Navbar({ isModalOpen, openModal }) {
                             <NavLink to="/about" onClick={closeMenu}>About Us</NavLink>
                         </li>
                         <li className={location.pathname === '/blog' ? styles.active : ''}>
-                            <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
+                            <a onClick={() => { closeMenu(); scrollToBlogSection(); }}>Blog</a>
                         </li>
                         <li className={location.pathname === '/contact' ? styles.active : ''}>
                             <a onClick={() => { handleOpenModal(); closeMenu(); }}>Contact Us</a>
@@ -96,4 +107,3 @@ function Navbar({ isModalOpen, openModal }) {
 }
 
 export default Navbar;
-

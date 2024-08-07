@@ -52,10 +52,10 @@ function ContactUsModal({ isOpen, onClose }) {
         };
 
         EmailJS.send(
-            'service_g47e02d',
-            'template_akkueoq',
+            'service_dtp8z3b',
+            'template_gq86ohf',
             templateParams,
-            '1Y7XlOdaLi1u0QuSz'
+            '0tjBaTjbTk7MPTU8G'
         )
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
